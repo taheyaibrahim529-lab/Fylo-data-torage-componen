@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-image: url(images/bg-desktop.png);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-color: hsl(243, 57%, 11%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway',sans-serif;
+    background-position: bottom;
+}
+.contener{
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+}
+.card-left{
+    background-color: hsl(228,56%,26%);
+    padding: 40px;
+    border-radius: 10px 100px 10px 10px;
+    width: 300px;
+}
+.logo{
+     margin-bottom: 30px;
+     width: 80px;
+}
+.icons{
+    display: flex;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 20px;
+
+}
+.icons-box{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        background-color: hsl(229,57%,11%);
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+
+}
+.icons-box img{
+    width: 15px;
+    height: 15px;
+}
+.card-right{
+        background-color: hsl(228,56%,26%);
+        padding: 40px;
+        border-radius: 10px;
+        width: 500px;
+        position: relative;
+
+}
+.gb-left{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0px 10px;
+    position: absolute;
+    top: -45px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(red, green, blue, alpha);
+    z-index: 10;
+}
+.gb-left h2{
+    color: hsl(229, 57%, 11%);
+    font-size: 40px;
+    margin: 0;
+    font-weight: 700;
+}
+.gb-left p{
+    letter-spacing: 1px;
+    color: hsl(229, 57%, 11%);
+    font-weight: 700;
+    font-size: 17px;
+
+}
+.card-right p{
+    font-size: 14px;
+    color: hsl(229, 7%, 55%);
+    margin-bottom: 10px;
+}
+.bar{
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+    height: 15px;
+    padding: 2px;
+    margin-top: 10px;
+
+}
+.bar-fill{
+    background: linear-gradient(to right, hsl(6,100%,80%),hsl(335,100%,65%));
+    height: 100%;
+    width: 80.5%;
+    border-radius: 20px;
+}
+.bar-labels{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12PX;
+    font-weight: 700PX;
+    color: hsl(243, 100%,93%);
+    margin-top: 10px;
+}
+.bar-fill::after{
+    content: "";
+    background-color: hsl(243, 100%,93%);
+    width: 10PX;
+    height: 10PX;
+    border-radius: 50%;
+    display: block;
+    float: right;
+    margin-top: 1px;
+}
+.gb-left::after{
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    right :0px;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 15px solid white;
+
+
+}
+@media(max-width: 768px) {
+
+
+body{
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+}
+.contener{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.card-left, .card-right{
+    width: 100%;
+}
+.gb-left{
+    top: auto;
+    bottom: -40px;
+    left: 50%  ;
+    transform: translateX(-50%);
+    right: auto;
+    border-radius: 10px;
+}
+.gb-left::after{
+    bottom: 10px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50) rotate(45deg);
+}
+}
