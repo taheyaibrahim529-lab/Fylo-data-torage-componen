@@ -140,7 +140,7 @@ body{
 
 
 body{
-    background-image: url(images/bg-mobile.png);
+    background-image: url(bg-mobile.png);
     background-size: cover;
 }
 .contener{
